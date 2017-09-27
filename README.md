@@ -1,20 +1,26 @@
-fullstack-nanodegree-vm
+Fullstack-nanodegree-vm
 =============
 
 Common code for the Relational Databases and Full Stack Fundamentals courses
 
+
+
 ### Running code
+
+Copy the following files into the /vagrant directory within the 
 
-Type at conos
-(First Question)
+FSND-Virtual-Machine:
 
-python top_three_articles.py
+* top_three_articles.py
+* author_views.py
+* top_error_date.py
 
-(2nd Question)
 
+
+To run do the following at git bash console:
+
+python top_three_articles
 python author_views.py
-
-(3rd Question)
 python top_error_date.py
 
 
@@ -25,7 +31,6 @@ There are the following 3 views:
 create view view_top_three_articles AS  select articles.slug as article,
  count(log.path) as views from articles JOIN log on log.path LIKE CONCAT('%', a
 rticles.slug, '%') group by articles.slug order by views desc limit 3;
-
 create view view_author_views AS  select authors.name, count(log.path) f
 rom authors join articles on articles.author = authors.id join log on log.path
 LIKE CONCAT('%', articles.slug, '%') group by authors.name order by count desc;
