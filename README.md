@@ -19,7 +19,7 @@ FSND-Virtual-Machine:
 
 To run do the following at git bash console:
 
-* python top_three_articles
+* python top_three_articles.py
 * python author_views.py
 * python top_error_date.py
 
